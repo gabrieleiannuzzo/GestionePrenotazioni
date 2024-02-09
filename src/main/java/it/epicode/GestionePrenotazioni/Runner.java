@@ -27,10 +27,10 @@ public class Runner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //Edificio e = edificioService.cercaEdificioPerId(180);
-//        Postazione po1 = postazioneService.cercaPostazionePerId(4);
-//        Utente u = utenteService.cercaUtentePerId(4);
-//        Prenotazione pr1 = prenotazioneService.cercaPrenotazionePerId(1);
+        //Edificio e = edificioService.cercaEdificioPerId(1);
+        //Postazione po1 = postazioneService.cercaPostazionePerId(1);
+        //Utente u = utenteService.cercaUtentePerId(1);
+        //Prenotazione pr1 = prenotazioneService.cercaPrenotazionePerId(1);
 
         Edificio e1 = new Edificio();
         e1.setCitta("Torino");
@@ -48,10 +48,10 @@ public class Runner implements CommandLineRunner {
         //postazioneService.salvaPostazione(po2);
 
         Utente u2 = new Utente();
-        u2.setEmail("a.v@it");
-        u2.setNome("Palese");
-        u2.setCognome("Bro");
-        u2.setUsername("a20ura");
+        u2.setEmail("g.i@it");
+        u2.setNome("Gabriele");
+        u2.setCognome("Iannuzzo");
+        u2.setUsername("gabbo");
 
         //utenteService.salvaUtente(u2);
 
@@ -63,11 +63,11 @@ public class Runner implements CommandLineRunner {
         //prenotazioneService.salvaPrenotazione(pr2);
 
         //prenotazioneService.eliminaPrenotazione(1);
-        utenteService.eliminaUtente(3);
-        utenteService.eliminaUtente(4);
+        //utenteService.eliminaUtente(3);
+        //utenteService.eliminaUtente(4);
         //edificioService.eliminaEdificio(3);
         //edificioService.eliminaEdificio(4);
 
-        System.out.println(postazioneService.cercaPostazionePerTipoECitta(Tipo.PRIVATO, "Roma"));
+        //System.out.println(postazioneService.cercaPostazionePerTipoECitta(Tipo.PRIVATO, "Roma"));
     }
 }

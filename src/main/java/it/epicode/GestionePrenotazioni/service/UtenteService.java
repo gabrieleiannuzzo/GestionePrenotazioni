@@ -40,7 +40,15 @@ public class UtenteService {
     }
 
     public Utente cercaUtentePerId(int id){
-        return utenteRepository.findById(id).get();
+        Utente u = null;
+
+        try {
+            u = utenteRepository.findById(id).get();
+        } catch (Exception e) {
+            logger.error("Non è stato trovato nulla");
+        }
+
+        return u;
     }
 
     public void eliminaUtente(int id){

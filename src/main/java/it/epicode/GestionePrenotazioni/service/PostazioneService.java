@@ -42,7 +42,15 @@ public class PostazioneService {
     }
 
     public Postazione cercaPostazionePerId(int id){
-        return postazioneRepository.findById(id).get();
+        Postazione p = null;
+
+        try {
+            p = postazioneRepository.findById(id).get();
+        } catch (Exception e) {
+            logger.error("Non è stato trovato nulla");
+        }
+
+        return p;
     }
 
     public List<Postazione> cercaPostazionePerTipoECitta(Tipo tipo, String citta){

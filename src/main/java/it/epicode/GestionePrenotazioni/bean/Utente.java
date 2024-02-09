@@ -24,4 +24,15 @@ public class Utente {
 
     @OneToMany(mappedBy = "utente", fetch = FetchType.EAGER)
     private List<Prenotazione> prenotazioni;
+
+    @Override
+    public String toString() {
+        return "Utente{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

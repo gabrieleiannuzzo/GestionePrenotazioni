@@ -25,4 +25,14 @@ public class Postazione {
 
     @OneToMany(mappedBy = "postazione", fetch = FetchType.EAGER)
     private List<Prenotazione> prenotazioni;
+
+    @Override
+    public String toString() {
+        return "Postazione{" +
+                "id=" + id +
+                ", descrizione='" + descrizione + '\'' +
+                ", tipo=" + tipo +
+                ", edificio=" + edificio +
+                '}';
+    }
 }

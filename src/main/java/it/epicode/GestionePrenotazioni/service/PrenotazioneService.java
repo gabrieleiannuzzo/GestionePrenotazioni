@@ -39,7 +39,15 @@ public class PrenotazioneService {
     }
 
     public Prenotazione cercaPrenotazionePerId(int id){
-        return prenotazioneRepository.findById(id).get();
+        Prenotazione p = null;
+
+        try {
+            p = prenotazioneRepository.findById(id).get();
+        } catch (Exception e) {
+            logger.error("Non è stato trovato nulla");
+        }
+
+        return p;
     }
 
     public void eliminaPrenotazione(int id){
