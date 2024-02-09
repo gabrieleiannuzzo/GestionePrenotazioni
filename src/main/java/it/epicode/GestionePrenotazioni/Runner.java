@@ -67,5 +67,7 @@ public class Runner implements CommandLineRunner {
         utenteService.eliminaUtente(4);
         //edificioService.eliminaEdificio(3);
         //edificioService.eliminaEdificio(4);
+
+        System.out.println(postazioneService.cercaPostazionePerTipoECitta(Tipo.PRIVATO, "Roma"));
     }
 }
