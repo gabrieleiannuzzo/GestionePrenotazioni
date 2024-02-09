@@ -27,39 +27,45 @@ public class Runner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Edificio e = edificioService.cercaEdificioPerId(1);
-        Postazione po1 = postazioneService.cercaPostazionePerId(1);
-        Utente u = utenteService.cercaUtentePerId(1);
+        //Edificio e = edificioService.cercaEdificioPerId(180);
+//        Postazione po1 = postazioneService.cercaPostazionePerId(4);
+//        Utente u = utenteService.cercaUtentePerId(4);
 //        Prenotazione pr1 = prenotazioneService.cercaPrenotazionePerId(1);
 
-//        Edificio e1 = new Edificio();
-//        e1.setCitta("Roma");
-//        e1.setIndirizzo("Via Italia");
-//        e1.setNome("Primo edificio");
-//        e1.setNumeroMassimoOccupanti(10);
-//
-//        edificioService.salvaEdificio(e1);
+        Edificio e1 = new Edificio();
+        e1.setCitta("Torino");
+        e1.setIndirizzo("Via Via Via");
+        e1.setNome("Quarto edificio");
+        e1.setNumeroMassimoOccupanti(10);
+
+        //edificioService.salvaEdificio(e1);
 
 //        Postazione po2 = new Postazione();
 //        po2.setEdificio(e);
 //        po2.setTipo(Tipo.PRIVATO);
-//        po2.setDescrizione("Prima postazione");
-//
-//        postazioneService.salvaPostazione(po2);
+//        po2.setDescrizione("Quinta postazione");
 
-//        Utente u2 = new Utente();
-//        u2.setEmail("ga.g@it");
-//        u2.setNome("Gabriele");
-//        u2.setCognome("Iannuzzo");
-//        u2.setUsername("gabbo");
-//
-//        utenteService.salvaUtente(u2);
+        //postazioneService.salvaPostazione(po2);
 
-        Prenotazione pr2 = new Prenotazione();
-        pr2.setPostazione(po1);
-        pr2.setUtente(u);
-        pr2.setDataPrenotazione(LocalDate.now());
+        Utente u2 = new Utente();
+        u2.setEmail("a.v@it");
+        u2.setNome("Palese");
+        u2.setCognome("Bro");
+        u2.setUsername("a20ura");
 
-        prenotazioneService.salvaPrenotazione(pr2);
+        //utenteService.salvaUtente(u2);
+
+//        Prenotazione pr2 = new Prenotazione();
+//        pr2.setPostazione(po1);
+//        pr2.setUtente(u);
+//        pr2.setDataPrenotazione(LocalDate.now().plusDays(2));
+
+        //prenotazioneService.salvaPrenotazione(pr2);
+
+        //prenotazioneService.eliminaPrenotazione(1);
+        utenteService.eliminaUtente(3);
+        utenteService.eliminaUtente(4);
+        //edificioService.eliminaEdificio(3);
+        //edificioService.eliminaEdificio(4);
     }
 }
