@@ -28,5 +28,7 @@ public class Prenotazione {
     @JoinColumn(name = "id_utente", nullable = false)
     private Utente utente;
 
+    /* Non inserisco l'annotazione @Column con la proprietà "name" perchè nel db viene automaticamente inserito come
+    "data_prenotazione" */
     private LocalDate dataPrenotazione;
 }

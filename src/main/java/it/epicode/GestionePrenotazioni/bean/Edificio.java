@@ -23,7 +23,8 @@ public class Edificio {
     /* Ho inserito il numero massimo degli occupanti in un edificio assumendo che la postazione sia occupata da una
     sola persona. Se un edificio può avere più postazioni possiamo inserire un metodo che controlla che non vengano
     prenotate troppe postazioni in un giorno, altrimenti non possiamo imporre un limite giornaliero assumendo che
-    la proprietà numeroMassimoOccupanti faccia parte della classe Postazione */
+    la proprietà numeroMassimoOccupanti faccia parte della classe Postazione. Non inserisco l'annotazione @Column
+    con la proprietà "name" perchè nel db viene automaticamente inserito come "numero_massimo_occupanti" */
     private int numeroMassimoOccupanti;
 
     @OneToMany(mappedBy = "edificio", fetch = FetchType.EAGER)
