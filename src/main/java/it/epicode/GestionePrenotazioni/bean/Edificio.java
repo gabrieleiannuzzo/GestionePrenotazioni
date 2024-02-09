@@ -24,7 +24,6 @@ public class Edificio {
     sola persona. Se un edificio può avere più postazioni possiamo inserire un metodo che controlla che non vengano
     prenotate troppe postazioni in un giorno, altrimenti non possiamo imporre un limite giornaliero assumendo che
     la proprietà numeroMassimoOccupanti faccia parte della classe Postazione */
-    @Column(name = "numero_massimo_occupanti")
     private int numeroMassimoOccupanti;
 
     @OneToMany(mappedBy = "edificio", fetch = FetchType.EAGER)

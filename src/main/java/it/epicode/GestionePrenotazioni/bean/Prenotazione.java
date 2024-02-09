@@ -28,6 +28,5 @@ public class Prenotazione {
     @JoinColumn(name = "id_utente", nullable = false)
     private Utente utente;
 
-    @Column(name = "data_prenotazione")
     private LocalDate dataPrenotazione;
 }
